@@ -6,7 +6,7 @@
 
 const hammingDistance = (stringA, stringB) => {
   if (stringA.length != stringB.length) {
-    throw new Error('The stings must have the same length');
+    throw new Error('The strings must have the same length');
   }
 
   let distance = 0;
