@@ -4,17 +4,19 @@
  * @return {number}
  */
 
-const hammingDistance = (a, b) => {
-  let count = 0;
-  if (a.length === b.length) {
-    for (let i = 0; i <= a.length; i++) {
-      if (a[i] !== b[i]) count += 1;
+const hammingDistance = (stringA, stringB) => {
+  let distance = 0;
+  if (stringA.length === stringB.length) {
+    for (let i = 0; i <= stringA.length; i++) {
+      if (stringA[i] !== stringB[i]) {
+        distance += 1;
+      }
     }
   } else {
     throw 'Strings should have the same length!';
   }
 
-  return count;
+  return distance;
 };
 
 module.exports = hammingDistance;
