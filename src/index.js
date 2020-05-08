@@ -11,7 +11,7 @@ const hammingDistance = (a, b) => {
       if (a[i] !== b[i]) count += 1;
     }
   } else {
-    throw 'String should have same length!';
+    throw 'Strings should have the same length!';
   }
 
   return count;
