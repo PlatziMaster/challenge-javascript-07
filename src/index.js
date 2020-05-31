@@ -5,11 +5,11 @@
  */
 
 const hammingDistance = (a, b) => {
+  let distance = 0;
 
   if(a.length != b.length){
     throw new Error;
   }
-  let distance = 0;
 
   for(let i = 0; i < a.length; i++){
     if(a[i] !== b[i]){
