@@ -1,10 +1,4 @@
-/**
- * @param {string} a
- * @param {string} b
- * @return {number}
- */
-
-const hammingDistance = (a, b) => {
+function distaPalabras(a,b){
     if(a.length == b.length){
         r="Igual de largas"
         var c = Array.from(a);
@@ -21,10 +15,9 @@ const hammingDistance = (a, b) => {
         g= prueba.reduce(reducer);
         r= a.length - g;
     }else{
-        new Error ("No son igual de largos los dos textos");
+        r="Diferentes de largas"
     }
     return r
+}
 
-  }
-  
-  module.exports = hammingDistance;
+console.log(distaPalabras("hola","holo"));
