@@ -5,7 +5,20 @@
  */
 
 const hammingDistance = (a, b) => {
-    
+  aList = a.split("");
+  bList = b.split("");
+  count = 0;
+
+  if (aList.length !== bList.length) {
+    throw new Error("Different lengths");
   }
-  
-  module.exports = hammingDistance;
+
+  for (i = 0; i < aList.length; i++) {
+    if (aList[i] !== bList[i]) {
+      count++;
+    }
+  }
+  return count;
+};
+
+module.exports = hammingDistance;
