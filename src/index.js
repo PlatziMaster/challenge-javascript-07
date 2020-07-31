@@ -7,14 +7,14 @@
 const hammingDistance = (a, b) => {
   const long1 = a.length
   const long2 = b.length
-  var number = 1
+  var number = []
+
   function filter1(valor1, valor2) {
     if (valor1 === valor2) {
       function lecturaCharacter(clave, clave2) {
-        for (var i = 0; i < clave.length; i++) {
-          if ((clave.charAt(i) === clave2.charAt(i)) === false) {
-            number = (number + 1)
-            return number
+        for (let i = 0; i < clave.length; i++) {
+          if ((clave.charAt(i) === clave2.charAt(i)) == false) {
+            number.push(1)
           } 
         }
       }
@@ -24,8 +24,8 @@ const hammingDistance = (a, b) => {
     }
   }
   filter1(long1, long2)
-  return number
+  console.log(Number(number.length));
+  return Number(number.length)
 }
-
-hammingDistance('holas', 'halos')
+hammingDistance('abc', 'add')
 module.exports = hammingDistance;
