@@ -9,7 +9,7 @@ const hammingDistance = (a, b) => {
       throw new TypeError('Strings of different lengths');
     const arrayA = a.split('');
     const arrayB = b.split('');
-    return result = arrayA.reduce((acc, current, index) => (
+    return arrayA.reduce((acc, current, index) => (
       current !== arrayB[index] ? ++acc : acc),0)
 }
   
